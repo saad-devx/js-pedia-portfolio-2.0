@@ -1,114 +1,49 @@
-import Image from "next/image";
-import { Geist, Geist_Mono } from "next/font/google";
+import React from "react";
+import { BackgroundGradientAnimation } from "@/components/ui/animated-gradient-hero";
+import { BgBeamsWithCollision } from "@/components/ui/beams-collision-section";
+import { FlipWords } from "@/components/ui/flip-word-wrapper";
+import { ExpandableCardSection } from "@/components/ui/expandalbe-cards";
+import LaptopParallaxScrollSection from "@/components/ui/parallax-laptop-scroll-section";
+import Footer from "@/components/ui/footer";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
+export default function BackgroundGradientAnimationDemo() {
+  return <main className="w-full h-[200vh]">
+    <BackgroundGradientAnimation>
+      <div
+        className="absolute z-50 inset-0 flex flex-col items-center justify-center text-white font-bold px-4 pointer-events-none text-3xl text-center md:text-4xl lg:text-7xl">
+        <p className="bg-clip-text text-transparent drop-shadow-2xl bg-gradient-to-br from-slate-900/80 to-blue-900/40">
+          <span className="relative bg-clip-text text-transparent bg-no-repeat bg-gradient-to-br from-purple-500 via-violet-500 to-pink-500 py-4">
+            JS Pedia
+          </span>
+          <br /> Your Javascript Hub
+        </p>
+      </div>
+    </BackgroundGradientAnimation>
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+    <BgBeamsWithCollision>
+      <section className="w-full flex flex-col gap-20 md:flex-row md:justify-between items-center">
+        <nav className="md:max-w-[50%]">
+          <div className="mb-4 md:mb-8 relative z-20 text-5xl lg:text-7xl font-bold text-center md:text-left text-black font-sans tracking-tight">
+            <FlipWords className="text-5xl lg:text-7xl" words={["Learn", "Develop", "Sell", "Teach", "Grow"]} />
+            <br />
+            <span className="text-slate-700">With JS Pedia</span>
+          </div>
+          <p className="text-base text-center md:text-left md:text-lg text-slate-700">
+            Empowering developers with community, assets, and interactive learning <br />
+            JS Pedia is our flagship platform designed to serve as a comprehensive resource for JavaScript enthusiasts. As the parent brand, it integrates multiple specialized child platforms under one ecosystem.
+          </p>
+        </nav>
+        <nav className="flex justify-center md:justify-end items-center">
+          <div className="w-[90%] md:w-3/4 rounded-3xl overflow-hidden">
+            <video className="w-full h-full object-cover" src="/stock-intro-video.mp4" controls={false} autoPlay loop muted></video>
+          </div>
+        </nav>
+      </section>
+    </BgBeamsWithCollision>
 
-export default function Home() {
-  return (
-    <div
-      className={`${geistSans.variable} ${geistMono.variable} grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]`}
-    >
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              pages/index.js
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <LaptopParallaxScrollSection />
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
-  );
+    <ExpandableCardSection />
+    <Footer />
+  </main>
 }
