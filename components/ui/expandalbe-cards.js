@@ -95,7 +95,7 @@ export function ExpandableCardSection() {
                                     exit={{ opacity: 0 }}
                                     href={active.ctaLink}
                                     target="_blank"
-                                    className="px-4 py-3 text-sm rounded-full font-bold bg-green-500 text-white">
+                                    className="px-6 py-3 text-sm rounded-full font-bold bg-gradient-to-r from-violet-500 to-pink-500 text-white">
                                     {active.ctaText}
                                 </motion.a>
                             </div>
@@ -191,21 +191,11 @@ const cards = [
         src: "/jsp-market-img.webp",
         ctaText: "Visit",
         ctaLink: "#",
-        content: () => {
-            return (
-                (<p>Lana Del Rey, an iconic American singer-songwriter, is celebrated for
-                    her melancholic and cinematic music style. Born Elizabeth Woolridge
-                    Grant in New York City, she has captivated audiences worldwide with
-                    her haunting voice and introspective lyrics. <br /> <br />Her songs
-                    often explore themes of tragic romance, glamour, and melancholia,
-                    drawing inspiration from both contemporary and vintage pop culture.
-                    With a career that has seen numerous critically acclaimed albums, Lana
-                    Del Rey has established herself as a unique and influential figure in
-                    the music industry, earning a dedicated fan base and numerous
-                    accolades.
-                </p>)
-            );
-        },
+        content: () => <p>
+            JS Pedia Market is a cutting-edge digital marketplace that seamlessly connects skilled JavaScript developers with innovative clients. Built to foster creativity and collaboration, the platform offers a curated space where project opportunities meet expert coding solutions. Professionals can present detailed portfolios and receive client feedback, ensuring every match is a perfect fit. Emphasizing quality and transparency, JS Pedia Market empowers both freelancers and businesses to thrive in a competitive tech landscape.
+            <br />
+            With robust support tools and streamlined project management features, its innovative approach and intuitive interface guarantee efficient, secure, and mutually beneficial engagements for all parties.
+        </p>
     },
     {
         title: "JS Pedia Community",
@@ -213,20 +203,11 @@ const cards = [
         src: "/jsp-community-img.webp",
         ctaText: "Visit",
         ctaLink: "#",
-        content: () => {
-            return (
-                (<p>Babu Maan, a legendary Punjabi singer, is renowned for his soulful
-                    voice and profound lyrics that resonate deeply with his audience. Born
-                    in the village of Khant Maanpur in Punjab, India, he has become a
-                    cultural icon in the Punjabi music industry. <br /> <br />His songs
-                    often reflect the struggles and triumphs of everyday life, capturing
-                    the essence of Punjabi culture and traditions. With a career spanning
-                    over two decades, Babu Maan has released numerous hit albums and
-                    singles that have garnered him a massive fan following both in India
-                    and abroad.
-                </p>)
-            );
-        },
+        content: () => <p>
+            JS Pedia Community is a vibrant forum dedicated exclusively to JavaScript enthusiasts, where knowledge is shared and challenges are overcome together. This dynamic space brings together both novices and experts, creating an environment where interactive discussions, live coding sessions, and Q&A workshops spark continuous learning.
+            <br />
+            Members exchange best practices and collaborate on innovative projects, forging strong networks along the way. With a rich library of resources and community-driven support, the platform nurtures creativity and professional growth. It’s the ideal destination for anyone eager to deepen their JavaScript expertise and contribute to a forward-thinking tech culture.
+        </p>
     },
 
     {
@@ -235,20 +216,11 @@ const cards = [
         src: "/hobbyland-img.webp",
         ctaText: "Visit",
         ctaLink: "#",
-        content: () => {
-            return (
-                (<p>Metallica, an iconic American heavy metal band, is renowned for their
-                    powerful sound and intense performances that resonate deeply with
-                    their audience. Formed in Los Angeles, California, they have become a
-                    cultural icon in the heavy metal music industry. <br /> <br />Their
-                    songs often reflect themes of aggression, social issues, and personal
-                    struggles, capturing the essence of the heavy metal genre. With a
-                    career spanning over four decades, Metallica has released numerous hit
-                    albums and singles that have garnered them a massive fan following
-                    both in the United States and abroad.
-                </p>)
-            );
-        },
+        content: () => <p>
+            Hobbyland is an innovative educational ecosystem that uniquely blends the roles of teacher and student, allowing you to both share your expertise and acquire new skills. Designed to reward curiosity and proficiency, the platform offers interactive courses, live workshops, and real-time mentorship sessions that transform traditional learning into a dynamic, engaging experience.
+            <br />
+            Members can earn while they learn, unlocking opportunities to monetize their knowledge and passion. With personalized learning paths and collaborative projects, Hobbyland redefines education into a mutually beneficial journey of growth and discovery for every participant.
+        </p>
     },
     {
         title: "Coding Ground",
@@ -256,19 +228,10 @@ const cards = [
         src: "/jsp-coding-ground-img.webp",
         ctaText: "Visit",
         ctaLink: "#",
-        content: () => {
-            return (
-                (<p>Himesh Reshammiya, a renowned Indian music composer, singer, and
-                    actor, is celebrated for his distinctive voice and innovative
-                    compositions. Born in Mumbai, India, he has become a prominent figure
-                    in the Bollywood music industry. <br /> <br />His songs often feature
-                    a blend of contemporary and traditional Indian music, capturing the
-                    essence of modern Bollywood soundtracks. With a career spanning over
-                    two decades, Himesh Reshammiya has released numerous hit albums and
-                    singles that have garnered him a massive fan following both in India
-                    and abroad.
-                </p>)
-            );
-        },
+        content: () => <p>
+            Coding Ground is an interactive, collaborative workspace where developers can build, showcase, and safeguard their projects in real time. This innovative environment encourages experimentation, teamwork, and creative problem-solving by providing integrated development tools and seamless code-sharing capabilities.
+            <br />
+            Users can collaborate on prototypes, receive instant feedback, and maintain a secure history of their code evolution. By blending creative exploration with technical excellence, Coding Ground streamlines the development process while building a robust portfolio that highlights your skills. It’s the perfect stage to turn innovative ideas into functional, impressive applications.
+        </p>
     },
 ];
